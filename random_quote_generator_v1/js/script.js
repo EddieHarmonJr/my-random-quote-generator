@@ -45,7 +45,6 @@ function printQuote() {
   `;
   
   //console.log(randomQuoteObject.citation);
-  console.log(htmlString);
   //getRandomQuote();
 
   if ( randomQuoteObject.hasOwnProperty('citation') ) {
@@ -57,6 +56,7 @@ function printQuote() {
   };
 
   htmlString += `</p>`;
+  return document.getElementById('quote-box').innerHTML = htmlString;
 }
 
 printQuote();
@@ -65,4 +65,4 @@ printQuote();
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-//document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
