@@ -26,11 +26,12 @@ let quotes = [
 
 function getRandomQuote() {
   let randomNumber = Math.floor( Math.random() * quotes.length - 1 ) + 1;
+  console.log(randomNumber);
+  console.log( quotes[randomNumber] );
   return quotes[randomNumber];
 }
 
-console.log( getRandomQuote() );
-
+getRandomQuote();
 /***
  * `printQuote` function
 ***/
@@ -42,4 +43,4 @@ console.log( getRandomQuote() );
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+//document.getElementById('load-quote').addEventListener("click", printQuote, false);
