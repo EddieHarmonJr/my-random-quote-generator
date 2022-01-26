@@ -19,13 +19,17 @@ let quotes = [
   {quote: "I guess it comes down to a simple choice, really: Get busy living, or get busy dying.", source: "Tim Robbins", citation: "The Shawshank Redemption", year: 1994}
 ];
 
-console.log(quotes);
 
 /***
  * `getRandomQuote` function
 ***/
 
+function getRandomQuote() {
+  let randomNumber = Math.floor( Math.random() * quotes.length - 1 ) + 1;
+  return quotes[randomNumber];
+}
 
+console.log( getRandomQuote() );
 
 /***
  * `printQuote` function
