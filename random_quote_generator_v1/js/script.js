@@ -4,31 +4,36 @@ let quotes = [{
     quote: "Hasta la vista, baby.",
     source: "Arnold Schwarzenegger",
     citation: "Terminator 2: Judgment Day",
-    year: 1991
+    year: 1991,
+    tags: "#Movies, #Films, #Theater"
   },
   {
     quote: "My mama always said life was like a box of chocolates. You never know what you're gonna get.",
     source: "Tom Hanks",
     citation: "Forrest Gump",
-    year: 1994
+    year: 1994,
+    tags: "#Movies, #Films, #Theater, #Chocolate"
   },
   {
     quote: "Oh, I say it, and I say it again. You been had. You been took. You been hoodwinked, bamboozled, led astray, run amuck!",
     source: "Denzel Washington",
     citation: "Malcolm X",
-    year: 1992
+    year: 1992,
+    tags: "#Movies, #Films, #Theater, #Historical #Figure, #History"
   },
   {
     quote: "All my life I had to fight. I had to fight my daddy. I had to fight my uncles. I had to fight my brothers. A girl child ain’t safe in a family of mens. But I ain’t never thought I’d have to fight in my own house!",
     source: "Oprah Winfrey",
     citation: "The Color Purple",
-    year: 1985
+    year: 1985,
+    tags: "#Movies, #Films, #Theater, #Spielberg"
   },
   {
     quote: "I guess it comes down to a simple choice, really: Get busy living, or get busy dying.",
     source: "Tim Robbins",
     citation: "The Shawshank Redemption",
-    year: 1994
+    year: 1994,
+    tags: "#Movies, #Films, #Theater, #Fiction, #Top 10"
   }
 ];
 
@@ -55,6 +60,10 @@ function printQuote() {
 
   if (randomQuoteObject.hasOwnProperty('year')) {
     htmlString += `<span class="year">${randomQuoteObject.year}</span>`;
+  };
+
+  if (randomQuoteObject.hasOwnProperty('tags')) {
+    htmlString += `<span class="year">${randomQuoteObject.tags}</span>`;
   };
 
   htmlString += `</p>`;
