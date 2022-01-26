@@ -32,17 +32,13 @@ let quotes = [{
   }
 ];
 
-
 // The getRandomQuote function generates a random number from 0 to the last index in the quotes array and places that number inside the randomNumber variable. Then the function returns a quote utilizing that aforementioned variable.
 
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length - 1) + 1;
-  //console.log(randomNumber);
-  //console.log( quotes[randomNumber] );
   return quotes[randomNumber];
 }
 
-//getRandomQuote();
 
 // The printQuote function calls the getRandomQuote function and places what it returns in a new variable called "randomQuoteObject". Another new variable, "htmlString" is created that uses template literals to take the values of the randomQuoteObject and places them in an html formatted string. If it has citation and year properties, it adds those values to the html string and then closes the string with a closing paragraph tag.
 
@@ -52,9 +48,6 @@ function printQuote() {
   <p class="quote">${randomQuoteObject.quote}</p>
   <p class="source">${randomQuoteObject.source}
   `;
-
-  //console.log(randomQuoteObject.citation);
-  //getRandomQuote();
 
   if (randomQuoteObject.hasOwnProperty('citation')) {
     htmlString += `<span class="citation">${randomQuoteObject.citation}</span>`;
@@ -69,9 +62,5 @@ function printQuote() {
 }
 
 printQuote();
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
- ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
