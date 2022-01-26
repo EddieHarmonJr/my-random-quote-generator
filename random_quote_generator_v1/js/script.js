@@ -40,13 +40,22 @@ function getRandomQuote() {
 function printQuote() {
   let randomQuoteObject = getRandomQuote();
   let htmlString = `
-  <p>${randomQuoteObject.quote}</p>
-  <p>This is the 2nd string.</p>
+  <p class="quote">${randomQuoteObject.quote}</p>
+  <p class="source">${randomQuoteObject.source}
   `;
 
-
+  //console.log(randomQuoteObject.citation);
   console.log(htmlString);
   //getRandomQuote();
+
+  if ( randomQuoteObject.hasOwnProperty('citation') ) {
+    htmlString += `<span class="citation">${randomQuoteObject.citation}</span>`;
+  };
+
+  if ( randomQuoteObject.hasOwnProperty('year') ) {
+    htmlString += `<span class="year">${randomQuoteObject.year}</span>`;
+  };
+
 }
 
 printQuote();
