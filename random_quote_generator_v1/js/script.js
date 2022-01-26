@@ -43,7 +43,7 @@ function printQuote() {
   <p class="quote">${randomQuoteObject.quote}</p>
   <p class="source">${randomQuoteObject.source}
   `;
-
+  
   //console.log(randomQuoteObject.citation);
   console.log(htmlString);
   //getRandomQuote();
@@ -56,6 +56,7 @@ function printQuote() {
     htmlString += `<span class="year">${randomQuoteObject.year}</span>`;
   };
 
+  htmlString += `</p>`;
 }
 
 printQuote();
