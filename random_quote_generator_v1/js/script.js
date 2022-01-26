@@ -26,18 +26,30 @@ let quotes = [
 
 function getRandomQuote() {
   let randomNumber = Math.floor( Math.random() * quotes.length - 1 ) + 1;
-  console.log(randomNumber);
-  console.log( quotes[randomNumber] );
+  //console.log(randomNumber);
+  //console.log( quotes[randomNumber] );
   return quotes[randomNumber];
 }
 
-getRandomQuote();
+//getRandomQuote();
+
 /***
  * `printQuote` function
 ***/
 
+function printQuote() {
+  let randomQuoteObject = getRandomQuote();
+  let htmlString = `
+  <p>${randomQuoteObject.quote}</p>
+  <p>This is the 2nd string.</p>
+  `;
 
 
+  console.log(htmlString);
+  //getRandomQuote();
+}
+
+printQuote();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
