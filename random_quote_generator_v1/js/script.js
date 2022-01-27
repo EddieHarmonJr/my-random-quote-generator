@@ -72,4 +72,11 @@ function printQuote() {
 
 printQuote();
 
+function colorChange() {
+  document.body.style.background = 'blue';
+}
+
+//This event listener changes the background color when the button is clicked.
+document.getElementById('load-quote').addEventListener("click", colorChange);
+
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
