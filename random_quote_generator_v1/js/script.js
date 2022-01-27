@@ -72,9 +72,21 @@ function printQuote() {
 
 printQuote();
 
+//The colorChange function changes the background color randomly when the button is pressed.
 function colorChange() {
-  document.body.style.background = 'blue';
+  let x = Math.floor( Math.random() * 256);
+  let y = Math.floor( Math.random() * 256);
+  let z = Math.floor( Math.random() * 256);
+
+  let backgroundColor = `rgb(${x}, ${y}, ${z})`;
+
+  // console.log(backgroundColor);
+  document.body.style.background = backgroundColor;
 }
+
+colorChange();
+
+
 
 //This event listener changes the background color when the button is clicked.
 document.getElementById('load-quote').addEventListener("click", colorChange);
