@@ -89,6 +89,7 @@ function colorChange() {
 //The autoRefresh function calls the printQuote function and then autoRefresh is passed into a 10 second interval loop.
 function autoRefresh() {
   printQuote();
+  colorChange();
 }
 
 setInterval(autoRefresh, 10000);
