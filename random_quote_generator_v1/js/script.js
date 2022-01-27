@@ -44,7 +44,6 @@ function getRandomQuote() {
   return quotes[randomNumber];
 }
 
-
 // The printQuote function calls the getRandomQuote function and places what it returns in a new variable called "randomQuoteObject". Another new variable, "htmlString" is created that uses template literals to take the values of the randomQuoteObject and places them in an html formatted string. If it has citation and year properties, it adds those values to the html string and then closes the string with a closing paragraph tag.
 
 function printQuote() {
@@ -79,12 +78,8 @@ function colorChange() {
   let z = Math.floor(Math.random() * 256);
 
   let backgroundColor = `rgb(${x}, ${y}, ${z})`;
-
-  // console.log(backgroundColor);
   document.body.style.background = backgroundColor;
 }
-
-//colorChange();
 
 //The autoRefresh function calls the printQuote function and then autoRefresh is passed into a 10 second interval loop.
 function autoRefresh() {
