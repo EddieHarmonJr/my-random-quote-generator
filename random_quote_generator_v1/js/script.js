@@ -74,9 +74,9 @@ printQuote();
 
 //The colorChange function changes the background color randomly when the button is pressed.
 function colorChange() {
-  let x = Math.floor( Math.random() * 256);
-  let y = Math.floor( Math.random() * 256);
-  let z = Math.floor( Math.random() * 256);
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
 
   let backgroundColor = `rgb(${x}, ${y}, ${z})`;
 
@@ -84,11 +84,17 @@ function colorChange() {
   document.body.style.background = backgroundColor;
 }
 
-colorChange();
+//colorChange();
 
+//The autoRefresh function calls the printQuote function and then autoRefresh is passed into a 10 second interval loop.
+function autoRefresh() {
+  printQuote();
+}
 
+setInterval(autoRefresh, 10000);
 
 //This event listener changes the background color when the button is clicked.
 document.getElementById('load-quote').addEventListener("click", colorChange);
 
+//This event listener changes the quote when the button is clicked.
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
